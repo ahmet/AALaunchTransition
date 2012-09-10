@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:docset="http://developer.apple.com/rss/docset_extensions" xml:lang="en">
+    <id>http://ahmet.github.com/AALaunchTransition/AALaunchTransition.atom/20120910073832</id>
+    <title type="text">AALaunchTransition Documentation</title>
+    <rights>Copyright © 2012 Ahmet AYGUN. All rights reserved.</rights>
+    <link rel="self" href="http://ahmet.github.com/AALaunchTransition/AALaunchTransition.atom"></link>
+    <docset:publisherName>Ahmet AYGUN</docset:publisherName>
+    <docset:publisherID>com.ahmetaygun.documentation</docset:publisherID>
+    <updated>2012-09-10T07:38:32+03:00</updated>
+    <entry>
+        <id>tag:ahmet.github.com,2012-09-10:com.ahmetaygun.AALaunchTransition/0.0.1</id>
+        <title type="text">AALaunchTransition Documentation</title>
+        <updated>2012-09-10T07:38:32+03:00</updated>
+        <content type="text">AALaunchTransition Documentation (v0.0.1)</content>
+        <link rel="enclosure" type="application/octet-stream" href="http://ahmet.github.com/AALaunchTransition/com.ahmetaygun.AALaunchTransition-0.0.1.xar" length="28202"></link>
+        <docset:identifier>com.ahmetaygun.AALaunchTransition</docset:identifier>
+        <docset:version>0.0.1</docset:version>
+        <docset:minimumXcodeVersion>3.0.0</docset:minimumXcodeVersion>
+    </entry>
+</feed>
