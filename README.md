@@ -44,6 +44,9 @@ Be sure you have the docset selected in the organizer to see results for AALaunc
 
 AALaunchTransition is compatible with ARC enabled projects by default.
 
+## License
+AALaunchTransition is released under the [MIT License](http://en.wikipedia.org/wiki/MIT_license), so do whatever you want to it.
+
 ## Contributing
 
 Want to contribute? It's good to hear.
