@@ -10,6 +10,13 @@ If you're using this framework in your project, I'd like to know! [Send me an em
 * Obtain `AALaunchTransition.framework` from Products folder.
 * Open your project and add `AALaunchTransition.framework` in **Link binary with libraries** section of **Build Phases** under its proper target.
 
+### CocoaPods
+
+If you are using [CocoaPods](http://cocoapods.org) add following line to your Podfile and then run `pod install`
+
+``` ruby
+pod 'AALaunchTransition'
+```
 
 ## Usage
 
