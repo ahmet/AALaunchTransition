@@ -46,7 +46,12 @@
     if (self) {
         if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])){
             if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
-                [self setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Default" ofType:@"png"]]];
+            {
+                if ([[UIScreen mainScreen] bounds].size.height == 568.0f)
+                    [self setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Default-568h" ofType:@"png"]]];
+                else
+                    [self setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Default" ofType:@"png"]]];
+            }
             else
                 [self setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Default-Portrait" ofType:@"png"]]];
         } else {
