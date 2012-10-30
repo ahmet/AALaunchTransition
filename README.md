@@ -27,7 +27,17 @@ After adding framework to your project all you need is import LaunchView.h in yo
 ```objective-c
 #import <AALaunchTransition/LaunchView.h>
 ...
-[self.view addSubview:[[LaunchView alloc] init]];
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    LaunchView *launch = [[LaunchView alloc] init];
+    [self.view addSubview:launch];
+
+    //Other additions
+
+    [self.view bringSubviewToFront:launch];
+}
 ```
 
 Easy as that. (See [LaunchView.h](https://github.com/ahmet/AALaunchTransition/blob/develop/AALaunchTransition/LaunchView.h) for all of the methods.)
