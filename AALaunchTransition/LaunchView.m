@@ -45,20 +45,33 @@
     self = [super initWithFrame:frame];
     if (self) {
         if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])){
-            if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
             {
                 if ([[UIScreen mainScreen] bounds].size.height == 568.0f)
-                    [self setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Default-568h" ofType:@"png"]]];
+                    [self setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Default-568h@2x" ofType:@"png"]]];
                 else
                     [self setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Default" ofType:@"png"]]];
             }
-            else
+            else {
+                if ([[UIApplication sharedApplication] statusBarOrientation] == UIInterfaceOrientationPortraitUpsideDown) {
+                    self.transform = CGAffineTransformIdentity;
+                    self.transform = CGAffineTransformMakeRotation(M_PI);
+                }
                 [self setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Default-Portrait" ofType:@"png"]]];
+            }
         } else {
+            self.transform = CGAffineTransformIdentity;
+            self.transform = CGAffineTransformMakeRotation(M_PI * 90 / 180.0 * ([[UIApplication sharedApplication] statusBarOrientation] == UIDeviceOrientationLandscapeLeft ? 1 : -1));
+            
             [self setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Default-Landscape" ofType:@"png"]]];
         }
         
-        self.frame = [[UIScreen mainScreen] bounds];
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+            self.frame = [[UIScreen mainScreen] bounds];
+        } else {
+            self.frame = [[UIScreen mainScreen] applicationFrame];
+        }
+        
         self.contentMode = UIViewContentModeTopLeft;
         
         [UIView animateWithDuration:animationDuration
