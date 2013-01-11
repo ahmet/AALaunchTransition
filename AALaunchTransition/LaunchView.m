@@ -32,12 +32,12 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    return [self initWithFrame:CGRectZero withDuration:2.0 withOptions:UIViewAnimationCurveEaseOut];
+    return [self initWithFrame:frame withDuration:2.0 withOptions:UIViewAnimationCurveEaseOut];
 }
 
 - (id)initWithFrame:(CGRect)frame withDuration:(NSTimeInterval)animationDuration
 {
-    return [self initWithFrame:CGRectZero withDuration:animationDuration withOptions:UIViewAnimationCurveEaseOut];
+    return [self initWithFrame:frame withDuration:animationDuration withOptions:UIViewAnimationCurveEaseOut];
 }
 
 - (id)initWithFrame:(CGRect)frame withDuration:(NSTimeInterval)animationDuration withOptions:(UIViewAnimationOptions)animationOptions
