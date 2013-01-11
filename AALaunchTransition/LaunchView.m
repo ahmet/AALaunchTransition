@@ -66,11 +66,10 @@
             [self setImage:[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Default-Landscape" ofType:@"png"]]];
         }
         
-        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
             self.frame = [[UIScreen mainScreen] bounds];
-        } else {
+        else
             self.frame = [[UIScreen mainScreen] applicationFrame];
-        }
         
         self.contentMode = UIViewContentModeTopLeft;
         
