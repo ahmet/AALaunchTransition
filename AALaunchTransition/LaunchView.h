@@ -55,6 +55,5 @@
  @param animationOptions Animation options, any of UIViewAnimationOptions could be given, UIViewAnimationCurveEaseOut by default.
  @return id
  */
-- (id)initWithFrame:(CGRect)frame withDuration:(NSTimeInterval)animationDuration withOptions:(UIViewAnimationOptions)animationOptions;
-
+- (id)initWithFrame:(CGRect)frame withDuration:(NSTimeInterval)animationDuration withDelay:(NSTimeInterval)delay withOptions:(UIViewAnimationOptions)animationOptions;
 @end

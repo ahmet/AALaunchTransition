@@ -42,6 +42,11 @@
 
 - (id)initWithFrame:(CGRect)frame withDuration:(NSTimeInterval)animationDuration withOptions:(UIViewAnimationOptions)animationOptions
 {
+	return [self initWithFrame:frame withDuration:animationDuration withDelay:0.0 withOptions:animationOptions];
+}
+
+- (id)initWithFrame:(CGRect)frame withDuration:(NSTimeInterval)animationDuration withDelay:(NSTimeInterval)delay withOptions:(UIViewAnimationOptions)animationOptions
+{
     self = [super initWithFrame:frame];
     if (self) {
         if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])){
@@ -72,9 +77,8 @@
             self.frame = [[UIScreen mainScreen] applicationFrame];
         
         self.contentMode = UIViewContentModeTopLeft;
-        
         [UIView animateWithDuration:animationDuration
-                              delay:0
+                              delay:delay
                             options:animationOptions
                          animations:^{
                              self.alpha = 0;
