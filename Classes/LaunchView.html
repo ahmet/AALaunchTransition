@@ -7,13 +7,13 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.5 (build 737)" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
 	</head>
 	<body>
 		<header id="top_header">
 			<div id="library" class="hideInXcode">
 				<h1><a id="libraryTitle" href="../index.html">AALaunchTransition </a></h1>
-				<a id="developerHome" href="../index.html">Ahmet AYGUN</a>
+				<a id="developerHome" href="../index.html">Ahmet AYGÜN</a>
 			</div>
 			
 			<div id="title" role="banner">
@@ -38,15 +38,30 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/animationOptions">&nbsp;&nbsp;&nbsp;&nbsp;animationOptions</option>
+	
+	<option value="//api/name/delay">&nbsp;&nbsp;&nbsp;&nbsp;delay</option>
+	
+	<option value="//api/name/duration">&nbsp;&nbsp;&nbsp;&nbsp;duration</option>
+	
+	
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/animateDismissal:">&nbsp;&nbsp;&nbsp;&nbsp;- animateDismissal:</option>
+	
 	<option value="//api/name/initWithFrame:withDuration:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithFrame:withDuration:</option>
 	
 	<option value="//api/name/initWithFrame:withDuration:withOptions:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithFrame:withDuration:withOptions:</option>
+	
+	<option value="//api/name/initWithFrame:withDuration:withOptions:delay:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithFrame:withDuration:withOptions:delay:</option>
+	
+	<option value="//api/name/initWithFrame:withDuration:withOptions:delay:dismissImmediately:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithFrame:withDuration:withOptions:delay:dismissImmediately:</option>
 	
 	
 	
@@ -72,15 +87,31 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/animationOptions">animationOptions</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delay">delay</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/duration">duration</a></span></li>
+	
+</ul></li>
+
 
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/animateDismissal:">animateDismissal:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithFrame:withDuration:">initWithFrame:withDuration:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithFrame:withDuration:withOptions:">initWithFrame:withDuration:withOptions:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithFrame:withDuration:withOptions:delay:">initWithFrame:withDuration:withOptions:delay:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithFrame:withDuration:withOptions:delay:dismissImmediately:">initWithFrame:withDuration:withOptions:delay:dismissImmediately:</a></span></li>
 	
 </ul></li>
 
@@ -119,8 +150,8 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p><a href="LaunchView.html">LaunchView</a> is a UIImageView basically shown after original launch image hidden
-  and will be fade out after some delay.</p>
+						<p>LaunchView is a UIImageView basically shown after original launch image hidden
+  and will be fade out after some <a href="#//api/name/delay">delay</a>.</p>
 					</div>
 					
 					
@@ -132,21 +163,71 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						<a title="Instance methods" name="task_Instance methods"></a>
 						
-<h3 class="subsubtitle task-title">Instance methods</h3>
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/duration">&nbsp;&nbsp;duration</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delay">&nbsp;&nbsp;delay</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/animationOptions">&nbsp;&nbsp;animationOptions</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Instance methods" name="task_Instance methods"></a>
+						<h3 class="subsubtitle task-title">Instance methods</h3>
+
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithFrame:withDuration:">&ndash;&nbsp;initWithFrame:withDuration:</a></code>
-		<span class="tooltip"><p>Initializes an UIImageView with given frame and fade-out it after given animationDuration.</p></span>
+		<span class="tooltip"><p>Initializes an UIImageView with given frame and fades it out after a given <a href="#//api/name/duration">duration</a>. Uses UIViewAnimationCurveEaseOut.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithFrame:withDuration:withOptions:">&ndash;&nbsp;initWithFrame:withDuration:withOptions:</a></code>
-		<span class="tooltip"><p>Initializes an UIImageView with given frame and fade-out it after given animationDuration with given animation options.</p></span>
+		<span class="tooltip"><p>Initializes an UIImageView with given frame and fades it out after a given <a href="#//api/name/duration">duration</a> with given animation options.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithFrame:withDuration:withOptions:delay:">&ndash;&nbsp;initWithFrame:withDuration:withOptions:delay:</a></code>
+		<span class="tooltip"><p>Initializes an UIImageView with given frame and fades it out after a given <a href="#//api/name/duration">duration</a> with given animation options.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithFrame:withDuration:withOptions:delay:dismissImmediately:">&ndash;&nbsp;initWithFrame:withDuration:withOptions:delay:dismissImmediately:</a></code>
+		<span class="tooltip"><p>Initializes an UIImageView with given frame and fades it out after a given <a href="#//api/name/duration">duration</a> with given animation options.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/animateDismissal:">&ndash;&nbsp;animateDismissal:</a></code>
+		<span class="tooltip"><p>Performs the fade-out animation for the view.</p></span>
 	</span>
 	
 	
@@ -159,6 +240,45 @@
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/animationOptions" title="animationOptions"></a>
+	<h3 class="subsubtitle method-title">animationOptions</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) UIViewAnimationOptions animationOptions</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/delay" title="delay"></a>
+	<h3 class="subsubtitle method-title">delay</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) CGFloat delay</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/duration" title="duration"></a>
+	<h3 class="subsubtitle method-title">duration</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) CGFloat duration</code></div>
+
+    
+</div>
+						
+					</div>
+					
 					
 					
 					
@@ -168,18 +288,71 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/animateDismissal:" title="animateDismissal:"></a>
+	<h3 class="subsubtitle method-title">animateDismissal:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Performs the fade-out animation for the view.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)animateDismissal:(void ( ^ ) ( void ))<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>Block to be called upon animation completion. Can be nil.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Performs the fade-out animation for the view.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">LaunchView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/initWithFrame:withDuration:" title="initWithFrame:withDuration:"></a>
 	<h3 class="subsubtitle method-title">initWithFrame:withDuration:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initializes an UIImageView with given frame and fade-out it after given animationDuration.</p>
+		<p>Initializes an UIImageView with given frame and fades it out after a given <a href="#//api/name/duration">duration</a>. Uses UIViewAnimationCurveEaseOut.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (id)initWithFrame:(CGRect)<em>frame</em> withDuration:(NSTimeInterval)<em>animationDuration</em></code></div>
-	
+
+    
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
@@ -209,7 +382,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Initializes an UIImageView with given frame and fade-out it after given animationDuration.</p>
+		<p>Initializes an UIImageView with given frame and fades it out after a given <a href="#//api/name/duration">duration</a>. Uses UIViewAnimationCurveEaseOut.</p>
 	</div>
 	
 	
@@ -233,12 +406,14 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initializes an UIImageView with given frame and fade-out it after given animationDuration with given animation options.</p>
+		<p>Initializes an UIImageView with given frame and fades it out after a given <a href="#//api/name/duration">duration</a> with given animation options.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (id)initWithFrame:(CGRect)<em>frame</em> withDuration:(NSTimeInterval)<em>animationDuration</em> withOptions:(UIViewAnimationOptions)<em>animationOptions</em></code></div>
-	
+
+    
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
@@ -273,7 +448,154 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Initializes an UIImageView with given frame and fade-out it after given animationDuration with given animation options.</p>
+		<p>Initializes an UIImageView with given frame and fades it out after a given <a href="#//api/name/duration">duration</a> with given animation options.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">LaunchView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithFrame:withDuration:withOptions:delay:" title="initWithFrame:withDuration:withOptions:delay:"></a>
+	<h3 class="subsubtitle method-title">initWithFrame:withDuration:withOptions:delay:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes an UIImageView with given frame and fades it out after a given <a href="#//api/name/duration">duration</a> with given animation options.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithFrame:(CGRect)<em>frame</em> withDuration:(NSTimeInterval)<em>animationDuration</em> withOptions:(UIViewAnimationOptions)<em>animationOptions</em> delay:(NSTimeInterval)<em>delay</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>frame</em></dt>
+			<dd><p>Frame of UIImageView will be shown in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animationDuration</em></dt>
+			<dd><p>Time interval that UIImageView will be shown in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animationOptions</em></dt>
+			<dd><p>Animation options, any of UIViewAnimationOptions could be given, UIViewAnimationCurveEaseOut by default.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delay</em></dt>
+			<dd><p>Time interval after which the dismissal animation will begin.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>id</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initializes an UIImageView with given frame and fades it out after a given <a href="#//api/name/duration">duration</a> with given animation options.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">LaunchView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithFrame:withDuration:withOptions:delay:dismissImmediately:" title="initWithFrame:withDuration:withOptions:delay:dismissImmediately:"></a>
+	<h3 class="subsubtitle method-title">initWithFrame:withDuration:withOptions:delay:dismissImmediately:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializes an UIImageView with given frame and fades it out after a given <a href="#//api/name/duration">duration</a> with given animation options.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithFrame:(CGRect)<em>frame</em> withDuration:(NSTimeInterval)<em>animationDuration</em> withOptions:(UIViewAnimationOptions)<em>animationOptions</em> delay:(NSTimeInterval)<em>delay</em> dismissImmediately:(BOOL)<em>dismissImmediately</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>frame</em></dt>
+			<dd><p>Frame of UIImageView will be shown in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animationDuration</em></dt>
+			<dd><p>Time interval that UIImageView will be shown in.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animationOptions</em></dt>
+			<dd><p>Animation options, any of UIViewAnimationOptions could be given, UIViewAnimationCurveEaseOut by default.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delay</em></dt>
+			<dd><p>Time interval after which the dismissal animation will begin.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>dismissImmediately</em></dt>
+			<dd><p>If <code>YES</code>, triggers the fade out animation right away. If <code>NO</code>, then <code>animateDismssal:</code> must be called on this instance.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>id</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Initializes an UIImageView with given frame and fades it out after a given <a href="#//api/name/duration">duration</a> with given animation options.</p>
 	</div>
 	
 	
@@ -303,9 +625,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2012 Ahmet AYGUN. All rights reserved. (Last updated: 2012-09-10)</span><br />
+						<p><span class="copyright">&copy; 2013 Ahmet AYGÜN. All rights reserved. (Last updated: 2013-02-13)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 737)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						
 					</div>
 				</div>
@@ -393,6 +715,14 @@
 			}
 			
 			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
 		</script>
 	</body>
 </html>
