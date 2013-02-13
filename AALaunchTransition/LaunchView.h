@@ -34,12 +34,16 @@
  */
 @interface LaunchView : UIImageView
 
+@property (nonatomic) CGFloat duration;
+@property (nonatomic) CGFloat delay;
+@property (nonatomic) UIViewAnimationOptions animationOptions;
+
 /**---------------------------------------------------------------------------------------
  * @name Instance methods
  *  ---------------------------------------------------------------------------------------
  */
 /**
- Initializes an UIImageView with given frame and fade-out it after given animationDuration.
+ Initializes an UIImageView with given frame and fades it out after a given duration. Uses UIViewAnimationCurveEaseOut.
 
  @param frame Frame of UIImageView will be shown in.
  @param animationDuration Time interval that UIImageView will be shown in.
@@ -48,13 +52,52 @@
 - (id)initWithFrame:(CGRect)frame withDuration:(NSTimeInterval)animationDuration;
 
 /**
- Initializes an UIImageView with given frame and fade-out it after given animationDuration with given animation options.
+ Initializes an UIImageView with given frame and fades it out after a given duration with given animation options.
 
  @param frame Frame of UIImageView will be shown in.
  @param animationDuration Time interval that UIImageView will be shown in.
  @param animationOptions Animation options, any of UIViewAnimationOptions could be given, UIViewAnimationCurveEaseOut by default.
  @return id
  */
-- (id)initWithFrame:(CGRect)frame withDuration:(NSTimeInterval)animationDuration withOptions:(UIViewAnimationOptions)animationOptions;
+- (id)initWithFrame:(CGRect)frame
+       withDuration:(NSTimeInterval)animationDuration
+        withOptions:(UIViewAnimationOptions)animationOptions;
+
+/**
+ Initializes an UIImageView with given frame and fades it out after a given duration with given animation options.
+ 
+ @param frame Frame of UIImageView will be shown in.
+ @param animationDuration Time interval that UIImageView will be shown in.
+ @param animationOptions Animation options, any of UIViewAnimationOptions could be given, UIViewAnimationCurveEaseOut by default.
+ @param delay Time interval after which the dismissal animation will begin.
+ @return id
+ */
+- (id)initWithFrame:(CGRect)frame
+       withDuration:(NSTimeInterval)animationDuration
+        withOptions:(UIViewAnimationOptions)animationOptions
+              delay:(NSTimeInterval)delay;
+
+/**
+ Initializes an UIImageView with given frame and fades it out after a given duration with given animation options.
+ 
+ @param frame Frame of UIImageView will be shown in.
+ @param animationDuration Time interval that UIImageView will be shown in.
+ @param animationOptions Animation options, any of UIViewAnimationOptions could be given, UIViewAnimationCurveEaseOut by default.
+ @param delay Time interval after which the dismissal animation will begin.
+ @param dismissImmediately If `YES`, triggers the fade out animation right away. If `NO`, then `animateDismssal:` must be called on this instance.
+ @return id
+ */
+- (id)initWithFrame:(CGRect)frame
+       withDuration:(NSTimeInterval)animationDuration
+        withOptions:(UIViewAnimationOptions)animationOptions
+              delay:(NSTimeInterval)delay
+ dismissImmediately:(BOOL)dismissImmediately;
+
+/**
+ Performs the fade-out animation for the view.
+ 
+ @param completion Block to be called upon animation completion. Can be nil.
+ */
+- (void)animateDismissal:(void (^)(void))completion;
 
 @end
