@@ -2,8 +2,6 @@
 
 ![Project status](http://stillmaintained.com/ahmet/AALaunchTransition.png)
 
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=ahmetaygun&url=https://github.com/ahmet/AALaunchTransition&title=AALaunchTransition&language=&tags=github&category=software)
-
 Simple framework to let your application's launch image fade-out to its initial view. Feel free to fork this repo and help me make it better.
 
 If you're using this framework in your project, I'd like to know! [Send me an email](mailto:me@ahmetaygun.net).
