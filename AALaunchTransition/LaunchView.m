@@ -32,18 +32,44 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    return [self initWithFrame:frame withDuration:2.0 withOptions:UIViewAnimationCurveEaseOut];
+    return [self initWithFrame:frame withDuration:2.0
+                   withOptions:UIViewAnimationCurveEaseOut delay:0 dismissImmediately:YES];
 }
 
 - (id)initWithFrame:(CGRect)frame withDuration:(NSTimeInterval)animationDuration
 {
-    return [self initWithFrame:frame withDuration:animationDuration withOptions:UIViewAnimationCurveEaseOut];
+    return [self initWithFrame:frame withDuration:animationDuration
+                   withOptions:UIViewAnimationCurveEaseOut delay:0 dismissImmediately:YES];
 }
 
-- (id)initWithFrame:(CGRect)frame withDuration:(NSTimeInterval)animationDuration withOptions:(UIViewAnimationOptions)animationOptions
+- (id)initWithFrame:(CGRect)frame
+       withDuration:(NSTimeInterval)animationDuration
+        withOptions:(UIViewAnimationOptions)animationOptions
+{
+    return [self initWithFrame:frame withDuration:animationDuration
+                   withOptions:animationOptions delay:0 dismissImmediately:YES];
+}
+
+- (id)initWithFrame:(CGRect)frame
+       withDuration:(NSTimeInterval)animationDuration
+        withOptions:(UIViewAnimationOptions)animationOptions
+              delay:(NSTimeInterval)delay
+{
+    return [self initWithFrame:frame withDuration:animationDuration
+                   withOptions:animationOptions delay:delay dismissImmediately:YES];
+}
+
+- (id)initWithFrame:(CGRect)frame
+       withDuration:(NSTimeInterval)animationDuration
+        withOptions:(UIViewAnimationOptions)animationOptions
+              delay:(NSTimeInterval)delay
+ dismissImmediately:(BOOL)dismissImmediately 
 {
     self = [super initWithFrame:frame];
     if (self) {
+        _animationOptions = animationOptions;
+        _duration = animationDuration;
+        _delay = delay;
         if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])){
             if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
             {
@@ -73,17 +99,26 @@
         
         self.contentMode = UIViewContentModeTopLeft;
         
-        [UIView animateWithDuration:animationDuration
-                              delay:0
-                            options:animationOptions
-                         animations:^{
-                             self.alpha = 0;
-                         }
-                         completion:^(BOOL finished){
-                             [self removeFromSuperview];
-                         }];
+        if (dismissImmediately)
+        {
+            [self animateDismissal:nil];
+        }
     }
+    
     return self;
+}
+
+- (void)animateDismissal:(void (^)(void))completion {
+    [UIView animateWithDuration:self.duration
+                          delay:self.delay
+                        options:self.animationOptions
+                     animations:^{
+                         self.alpha = 0;
+                     }
+                     completion:^(BOOL finished) {
+                         [self removeFromSuperview];
+                         if (completion) completion();
+                     }];
 }
 
 @end
