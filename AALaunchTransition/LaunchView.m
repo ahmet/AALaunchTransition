@@ -33,13 +33,13 @@
 - (id)initWithFrame:(CGRect)frame
 {
     return [self initWithFrame:frame withDuration:2.0
-                   withOptions:UIViewAnimationCurveEaseOut delay:0 dismissImmediately:YES];
+                   withOptions:UIViewAnimationOptionCurveEaseOut delay:0 dismissImmediately:YES];
 }
 
 - (id)initWithFrame:(CGRect)frame withDuration:(NSTimeInterval)animationDuration
 {
     return [self initWithFrame:frame withDuration:animationDuration
-                   withOptions:UIViewAnimationCurveEaseOut delay:0 dismissImmediately:YES];
+                   withOptions:UIViewAnimationOptionCurveEaseOut delay:0 dismissImmediately:YES];
 }
 
 - (id)initWithFrame:(CGRect)frame
