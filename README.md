@@ -1,6 +1,6 @@
 # AALaunchTransition
 
-![Project status](http://stillmaintained.com/ahmet/AALaunchTransition.png)
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 Simple framework to let your application's launch image fade-out to its initial view. Feel free to fork this repo and help me make it better.
 
